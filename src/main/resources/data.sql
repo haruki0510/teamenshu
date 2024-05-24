@@ -1,0 +1,1 @@
+INSERT INTO sample (name, comment) VALUES ('sample', '説明を表示する');

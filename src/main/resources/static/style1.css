@@ -1,0 +1,47 @@
+/* ページ全体のフォントとマージンを設定 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダーのスタイル */
+h1 {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* 入力内容のコンテナのスタイル */
+#inputContainer {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* 入力内容のセクションのスタイル */
+.inputSection {
+    margin-bottom: 20px;
+}
+
+/* 入力フォームのスタイル */
+form {
+    margin-top: 10px;
+}
+
+/* 入力ボタンのスタイル */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* 入力ボタンのマウスホバー時のスタイル */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
