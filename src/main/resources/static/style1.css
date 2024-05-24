@@ -1,47 +1,52 @@
-/* ページ全体のフォントとマージンを設定 */
+/* ページ全体のスタイル */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* ヘッダーのスタイル */
+/* タイトルのスタイル */
 h1 {
+    color: #333;
     text-align: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-/* 入力内容のコンテナのスタイル */
-#inputContainer {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-
-/* 入力内容のセクションのスタイル */
-.inputSection {
     margin-bottom: 20px;
 }
 
-/* 入力フォームのスタイル */
-form {
-    margin-top: 10px;
-}
-
-/* 入力ボタンのスタイル */
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+/* 入力内容のスタイル */
+.input-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    text-decoration: none;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* 入力ボタンのマウスホバー時のスタイル */
-input[type="submit"]:hover {
-    background-color: #45a049;
+.input-section p {
+    margin: 10px 0;
+}
+
+/* フォームのスタイル */
+.form-container {
+    text-align: center;
+}
+
+.form-container form {
+    margin: 10px;
+    display: inline-block;
+}
+
+.form-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
 }
