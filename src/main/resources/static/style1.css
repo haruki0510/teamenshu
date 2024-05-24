@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #ffffcc; /* 背景色を黄色に変更 */
 }
 
 /* タイトルのスタイル */
@@ -11,6 +11,8 @@ h1 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
+    border-bottom: 2px solid #333; /* タイトルに下線を追加 */
+    padding-bottom: 10px; /* 下線とタイトルの間隔を作成 */
 }
 
 /* 入力内容のスタイル */
@@ -30,6 +32,7 @@ h1 {
 /* フォームのスタイル */
 .form-container {
     text-align: center;
+    margin-top: 20px;
 }
 
 .form-container form {
@@ -37,7 +40,7 @@ h1 {
     display: inline-block;
 }
 
-.form-button {
+.form-container form input[type="submit"] {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -47,6 +50,6 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.form-button:hover {
+.form-container form input[type="submit"]:hover {
     background-color: #0056b3;
 }
