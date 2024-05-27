@@ -15,7 +15,13 @@ import com.example.demo.entity.EntForm;
 
 @Controller
 public class MemoController {
-
+	
+	@RequestMapping("/main")
+	public String form(Model model) {
+		model.addAttribute("title","コードメモ");
+		return "main1";
+	}
+	
 	@RequestMapping("/form")
 	public String form(Model model, Input input) {
 		model.addAttribute("title","サンプルフォーム");

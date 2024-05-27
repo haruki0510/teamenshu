@@ -1,0 +1,54 @@
+/* ページ全体を画面中央に配置 */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('washi_pattern.jpg'); /* 和紙の模様の背景画像 */
+    background-color: rgb(192, 192, 192); /* 背景色のフォールバック */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* コンテナのスタイル */
+.container {
+    text-align: center;
+}
+
+/* タイトルのスタイル */
+h1 {
+    color: rgb(0, 0, 0); /* タイトルの文字色を派手に */
+    font-size: 64px; /* タイトルのフォントサイズを大きく */
+    margin-bottom: 20px; /* 下部の余白を追加 */
+}
+
+/* 各フォームを横並びに配置 */
+.form-with-illustration {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top; /* フォームとイラストを上揃えにする */
+}
+
+/* イラストのサイズを調整 */
+.form-with-illustration img {
+    width: 120px; /* 幅を120pxに設定 */
+    height: auto; /* 高さは自動調整 */
+}
+
+/* フォーム内の要素のスタイル */
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 25px 50px; /* ボタンのサイズを大きくする */
+    font-size: 24px; /* ボタンのフォントサイズを大きくする */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

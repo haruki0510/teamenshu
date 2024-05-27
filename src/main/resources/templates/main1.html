@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stylemain.css">
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${title}"></h1>
+        
+        <!-- 登録フォーム -->
+        <div class="form-with-illustration">
+            <img src="computer_oneclick_sagi.png" alt="Registration Illustration">
+            <form method="get" action="#" th:action="@{/form}">
+                <input type="submit" value="登録">
+            </form>
+        </div>
+        
+        <!-- 一覧フォーム -->
+        <div class="form-with-illustration">
+            <img src="white_list.png" alt="List Illustration">
+            <form method="get" action="#" th:action="@{/view}">
+                <input type="submit" value="一覧">
+            </form>
+        </div>
+        
+        <!-- 検索フォーム -->
+        <div class="form-with-illustration">
+            <img src="search_mushimegane1.png" alt="Search Illustration">
+            <form method="get" action="#" th:action="@{/search}">
+                <input type="submit" value="検索">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
