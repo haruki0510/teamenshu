@@ -4,6 +4,7 @@ public class EntForm {
 	private int id;
 	private String name;
 	private String comment;
+	private String language;
 
 
 
@@ -27,5 +28,13 @@ public class EntForm {
 
 	public void setComment(String comment) {
 		this.comment = comment;
+	}
+
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 }

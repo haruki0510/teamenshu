@@ -69,6 +69,7 @@ public class MemoController {
 		EntForm entform = new EntForm();
 		entform.setName(input.getName1());
 		entform.setComment(input.getComment1());
+		entform.setLanguage(input.getLanguage1());
 		sampledao.insertDb(entform);
 		return "complete";
 		}
@@ -111,6 +112,9 @@ public class MemoController {
 				
 				System.out.println(input.getComment1());//取得できているかの確認
 				entform.setComment(input.getComment1());
+				
+				System.out.println(input.getLanguage1());//取得できているかの確認
+				entform.setLanguage(input.getLanguage1());
 				//更新の実行
 				sampledao.updateDb(id,entform);
 				//一覧画面へリダイレクト

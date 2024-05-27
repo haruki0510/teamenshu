@@ -12,12 +12,15 @@
 			<th>id</th>
 			<th>名前</th>
 			<th>コメント</th>
+			<th>言語</th>
+			<th></th>
 			<th></th>
 		</tr>
 		<tr th:each="res : ${dbList}">
 			<td th:text="${res.id}">1</td>
 			<td th:text="${res.name}">名前</td>
 			<td th:text="${res.comment}">コメント</td>
+			<td th:text="${res.language}">言語</td>
 			<td>
 				<form th:action="@{/edit/{id}(id=${res.id})}">
 					<input type="submit" value="編集">

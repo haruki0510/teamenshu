@@ -9,7 +9,16 @@ public class Input {
 	@NotBlank(message="文字を入力してください")
 	private String comment1;
 	private String word;
+	private String language1;
 	
+	public String getLanguage1() {
+		return language1;
+	}
+
+	public void setLanguage1(String language1) {
+		this.language1 = language1;
+	}
+
 	public String getWord() {
 		return word;
 	}

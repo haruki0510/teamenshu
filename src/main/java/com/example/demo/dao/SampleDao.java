@@ -19,7 +19,7 @@ public class SampleDao {
 		this.db = db;
 	}
 	public void insertDb(EntForm entform) {
-		db.update("INSERT INTO sample (name, comment) VALUES(?, ?)",entform.getName(), entform.getComment() );
+		db.update("INSERT INTO sample (name, comment, language) VALUES(?, ?, ?)",entform.getName(), entform.getComment(), entform.getLanguage());
 	}
 	//検索処理
 	public List<EntForm> searchDb(){
@@ -41,6 +41,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setComment((String)result1.get("comment"));
+			entformdb.setLanguage((String)result1.get("language"));
 
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
@@ -74,6 +75,7 @@ public class SampleDao {
 				entformdb.setId((int)result1.get("id"));
 				entformdb.setName((String)result1.get("name"));
 				entformdb.setComment((String)result1.get("comment"));
+				entformdb.setLanguage((String)result1.get("language"));
 				//移し替えたデータを持ったentformdbを、resultDB2に入れる
 				resultDb2.add(entformdb);
 			}
@@ -99,6 +101,7 @@ public class SampleDao {
 				entformdb.setId((int)result1.get("id"));
 				entformdb.setName((String)result1.get("name"));
 				entformdb.setComment((String)result1.get("comment"));
+				entformdb.setLanguage((String)result1.get("language"));
 				//移し替えたデータを持ったentformdbを、resultDB2に入れる
 				resultDb2.add(entformdb);
 			}
@@ -115,6 +118,7 @@ public class SampleDao {
 			//UPDATEを実行
 			db.update("UPDATE sample SET name = ? WHERE id = ?",entform.getName(), id);
 			db.update("UPDATE sample SET comment = ? WHERE id = ?",entform.getComment(), id);
+			db.update("UPDATE sample SET language = ? WHERE id = ?",entform.getLanguage(), id);
 		}
 		
 	
