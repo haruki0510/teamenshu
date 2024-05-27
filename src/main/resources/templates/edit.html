@@ -19,9 +19,16 @@
 			<p>
 				コメント: <input type="text" name="comment1" th:value="*{comment}">
 			</p>
-			<p>
-				言語: <input type="text" name="language1" th:value="*{language}">
-			</p>
+			<div>
+			    <label for="language">言語：</label>
+			    <select id="language" name="language1" th:value="*{language}">
+			        <option value="java">Java</option>
+			        <option value="html">HTML</option>
+			        <option value="css">CSS</option>
+			        <option value="javascript">JavaScript</option>
+			    </select>
+			</div>
+
 			
 			<input type="submit" value="更新">
 		</form>
