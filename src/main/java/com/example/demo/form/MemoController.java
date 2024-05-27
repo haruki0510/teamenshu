@@ -83,6 +83,9 @@ public class MemoController {
 				EntForm entform = new EntForm();
 				System.out.println(input.getName1());//取得できているかの確認
 				entform.setName(input.getName1());
+				
+				System.out.println(input.getComment1());//取得できているかの確認
+				entform.setComment(input.getComment1());
 				//更新の実行
 				sampledao.updateDb(id,entform);
 				//一覧画面へリダイレクト

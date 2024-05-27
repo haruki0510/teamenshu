@@ -40,6 +40,7 @@ public class SampleDao {
 			//id、nameのデータをentformdbに移す
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
+			entformdb.setComment((String)result1.get("comment"));
 
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
@@ -72,6 +73,7 @@ public class SampleDao {
 				//id、nameのデータをentformdbに移す
 				entformdb.setId((int)result1.get("id"));
 				entformdb.setName((String)result1.get("name"));
+				entformdb.setComment((String)result1.get("comment"));
 				//移し替えたデータを持ったentformdbを、resultDB2に入れる
 				resultDb2.add(entformdb);
 			}
@@ -85,6 +87,7 @@ public class SampleDao {
 			System.out.println("編集の実行");
 			//UPDATEを実行
 			db.update("UPDATE sample SET name = ? WHERE id = ?",entform.getName(), id);
+			db.update("UPDATE sample SET comment = ? WHERE id = ?",entform.getComment(), id);
 		}
 	
 	
