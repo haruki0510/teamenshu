@@ -1,0 +1,64 @@
+body {
+    background-color: #F0F0F0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+form {
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    background-color: #f0f0f0;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1em; /* 追加 */
+    margin-bottom: 1em; /* 追加 */
+}
+
+.form-group {
+    margin-top: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1em;
+    background-color: #e0e0e0;
+}
+
+label {
+    display: block;
+    margin-bottom: .5em;
+    color: #333333;
+}
+
+input[type="text"], select {
+    width: calc(100% - 2em); /* 余白を考慮して幅を設定 */
+    padding: .5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 0.7em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: .875em;
+}
+

@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Hello</title>
-	<meta charset="utf-8" />
+    <title>新規作成</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body>
-	<h1 th:text="${title}"></h1>
-	<form method="get" action="#"  th:action="@{/confirm}" th:object="${input}">
-	    <p>名前：<input type="text" name="name1" th:value="*{name1}"></p>
-	    <div th:if="${#fields.hasErrors('name1')}" th:errors="*{name1}">名前の入力にエラーがあります。</div>
-	    <p>コメント：<input type="text" name="comment1" th:value="*{comment1}"></p>
-	    <div th:if="${#fields.hasErrors('comment1')}" th:errors="*{comment1}">コメントの入力にエラーがあります。</div>
-	    <input type="submit" value="送信">
-	</form>
-
+    <h1 th:text="${title}">新規作成</h1>
+    <form method="get" action="#" th:action="@{/confirm}" th:object="${input}">
+        <div>
+            <label for="code">CODE：</label>
+            <input type="text" id="code" name="name1" th:value="*{name1}" placeholder="コードを入力">
+            <div th:if="${#fields.hasErrors('name1')}" th:errors="*{name1}" class="error">名前の入力にエラーがあります。</div>
+        </div>
+        <div>
+            <label for="comment">コメント：</label>
+            <input type="text" id="comment" name="comment1" th:value="*{comment1}" placeholder="コードの説明を入力">
+            <div th:if="${#fields.hasErrors('comment1')}" th:errors="*{comment1}" class="error">コメントの入力にエラーがあります。</div>
+        </div>
+        <div>
+            <label for="language">言語：</label>
+            <select id="language" name="language">
+                <option value="java">Java</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="送信">
+        </div>
+    </form>
 </body>
 </html>
+
+

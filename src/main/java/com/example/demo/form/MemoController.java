@@ -24,7 +24,7 @@ public class MemoController {
 	
 	@RequestMapping("/form")
 	public String form(Model model, Input input) {
-		model.addAttribute("title","サンプルフォーム");
+		model.addAttribute("title","新規作成");
 		return "input";
 	}
 	@RequestMapping("/search")
