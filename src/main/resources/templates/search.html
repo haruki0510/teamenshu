@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Hello</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+	<!-- 検索フォーム -->
+	<form method="get" action="#" th:action="@{/result}">
+	  <!-- ワードの入力 -->
+	  <p>
+	    ワード：<input type="text" name="word">
+	  </p>
+	
+	  <!-- 表示数の入力 -->
+	  <p>表示するデータの数
+	    <select name="number">
+	      <option value="10" selected>10</option>
+	      <option value="20">20</option>
+	      <option value="30">30</option>
+	    </select>
+	  </p>
+	  
+	  <!-- 送信ボタン -->
+	  <p>
+		<input type="submit" value="検索する">
+	  </p>
+	</form>
+</body>
+</html>

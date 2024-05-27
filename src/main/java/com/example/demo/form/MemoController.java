@@ -21,6 +21,25 @@ public class MemoController {
 		model.addAttribute("title","サンプルフォーム");
 		return "input";
 	}
+	@RequestMapping("/search")
+	public String search(Model model, Input input) {
+		model.addAttribute("title","サンプルフォーム");
+		return "search";
+	}
+	@RequestMapping("/result")
+	public String result(Model model, Input input) {
+	    // SQL インジェクションを防ぐために PreparedStatement を使用することを推奨します
+	    String sql = "SELECT * FROM sample WHERE name = ?";
+	    
+	    // word 変数の値を使用して PreparedStatement をセットアップします
+	    List<EntForm> list = sampledao.serchDb2(input.getWord());
+	    
+	    model.addAttribute("title", input.getWord());
+	    // 結果をモデルに追加
+	    model.addAttribute("results", list);
+	    
+	    return "result";
+	}
 	
 	@RequestMapping("/confirm")
 	public String confirm(@Validated Input input, BindingResult result, Model model) {

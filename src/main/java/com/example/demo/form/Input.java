@@ -8,8 +8,16 @@ public class Input {
 	private String name1;
 	@NotBlank(message="文字を入力してください")
 	private String comment1;
-	private int age1;
+	private String word;
 	
+	public String getWord() {
+		return word;
+	}
+
+	public void setWord(String word) {
+		this.word = word;
+	}
+
 	public Input() {}
 
 	public String getName1() {
@@ -18,13 +26,6 @@ public class Input {
 	
 	public void setName1(String name1) {
 		this.name1 = name1;
-	}
-	public int getAge1() {
-		return age1;
-	}	
-	
-	public void setAge1(int age1) {
-		this.age1 = age1;
 	}
 
 	public String getComment1() {

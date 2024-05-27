@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-<title>Hello</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" th:href="@{/style.css}">
+    <title>Price List</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-	<h1 th:text="${title}"></h1>
+	<h1 th:text="検索結果"></h1>
 	<table>
 		<tr>
 			<th>id</th>
@@ -14,7 +14,7 @@
 			<th>コメント</th>
 			<th></th>
 		</tr>
-		<tr th:each="res : ${dbList}">
+		<tr th:each="res : ${results}">
 			<td th:text="${res.id}">1</td>
 			<td th:text="${res.name}">名前</td>
 			<td th:text="${res.comment}">コメント</td>
@@ -30,9 +30,6 @@
 			</td>
 		</tr>
 	</table>
-	<p>
-		<a href="/form" th:href="@{/form}">フォーム入力画面へ</a>
-	</p>
 	<form method="get" action="#" th:action="@{/search}">
 				<input type="submit" value="検索画面へ">
 	</form>
