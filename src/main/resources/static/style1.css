@@ -9,7 +9,6 @@ body {
     align-items: center;
     height: 100vh;
 }
-
 h1 {
     color: #333;
     text-align: center;
@@ -17,18 +16,15 @@ h1 {
     border-bottom: 2px dashed #333;
     padding-bottom: 10px;
 }
-
 #label {
     width: 160px;
 }
 #label, #elm {
     display: table-cell;
 }
-
 p {
     margin-left: 30px;
 }
-
 #outer {
     background-color: rgba(179, 229, 252, 0.2); /* 水色に変更 */
     width: 70%;
@@ -36,20 +32,17 @@ p {
     border-radius: 5px; /* 四角い図形 */
     border: none; /* 枠線なし */
 }
-
 .form-container {
     text-align: center;
     margin-top: 20px;
 }
-
 .form-container form {
     margin: 10px;
     display: inline-block;
 }
-
 .form-container form input[type="submit"] {
     padding: 10px 20px;
-    background-color: #45a049;
+    background-color: #45A049;
     color: #ffff;
     border: none;
     border-radius: 5px;
@@ -57,7 +50,14 @@ p {
     transition: background-color 0.3s ease;
     margin: 1px; /* ボタンの間隔を追加 */
 }
-
 .form-container form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #45A049;
 }
+
+リアクションする
+
+返信
+
+
+
+
