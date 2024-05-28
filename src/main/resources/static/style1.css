@@ -25,19 +25,26 @@ h1 {
 p {
     margin-left: 30px;
 }
-#outer {
+.sikaku {
     background-color: rgba(179, 229, 252, 0.2); /* 水色に変更 */
-    width: 70%;
+    width: 500px;
+    height: 300px;
     padding: 20px; /* パディング追加 */
     border-radius: 5px; /* 四角い図形 */
     border: none; /* 枠線なし */
+  	
+}
+.moji{
+	padding: 50px;
 }
 .form-container {
     text-align: center;
     margin-top: 20px;
+    display: inline-block;
+    
 }
 .form-container form {
-    margin: 10px;
+    margin: 20px;
     display: inline-block;
 }
 .form-container form input[type="submit"] {
@@ -54,9 +61,7 @@ p {
     background-color: #45A049;
 }
 
-リアクションする
 
-返信
 
 
 
