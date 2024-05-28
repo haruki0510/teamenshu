@@ -42,3 +42,17 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+
+.aaa {
+    position: fixed; /* 要素を固定配置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 画面の背面に配置 */
+    background-image: url('memo7.jpeg'); /* 画像のパスを指定 */
+    background-size: cover; /* 画像を要素全体に広げる */
+    background-position: center; /* 画像を中央に配置 */
+}
+
