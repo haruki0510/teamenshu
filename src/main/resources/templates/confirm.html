@@ -10,7 +10,9 @@
 	
 <h1>確認ページ</h1>
 <div th:object="${input}" class="input-section">
+	<div class="sikaku">
 	<div id="label">
+		
 	            <p>コード：</p>
 	            <p>コメント：</p>
 	            <p>言語：</p>
@@ -21,6 +23,7 @@
 	            <p th:text="*{language1}" id="language"></p>
 	        </div>
 			
+	</div>
 		
     <div class="form-container">
         <form method="get" action="#" th:action="@{/complete}">
