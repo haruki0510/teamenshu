@@ -37,9 +37,8 @@ public class MemoController {
 	public String result1(Model model, Input input) {
 	    
 	    // word 変数の値を使用して PreparedStatement をセットアップします
-	    List<EntForm> list = sampledao.searchDb2(input.getWord());
+	    List<EntForm> list = sampledao.searchDb2(input.getWord(), input.getWord(), input.getWord());
 	    
-	    model.addAttribute("title", input.getWord());
 	    // 結果をモデルに追加
 	    model.addAttribute("results", list);
 	    

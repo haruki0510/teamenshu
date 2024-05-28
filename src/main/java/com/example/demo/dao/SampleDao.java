@@ -83,43 +83,17 @@ public class SampleDao {
 			//Controllerに渡す
 			return resultDb2;
 		}
-//		//更新画面の表示(SELECT)
-//		public List<EntForm> serchDb2(String name) {
-//
-//			//コンソールに表示
-//			System.out.println("編集画面を出します");
-//			//データベースから目的の1件を取り出して、そのままresultDB1に入れる
-//			List<Map<String, Object>> resultDb1 = db.queryForList("SELECT * FROM sample where name=?", name);
-//			//画面に表示しやすい形のList(resultDB2)を用意
-//			List<EntForm> resultDb2=new ArrayList<EntForm>();
-//
-//			//1件ずつピックアップ
-//			for(Map<String,Object> result1:resultDb1) {
-//				//データ1件分を1つのまとまりとするので、EntForm型の「entformdb」を生成
-//				EntForm entformdb = new EntForm();
-//				//id、nameのデータをentformdbに移す
-//				entformdb.setId((int)result1.get("id"));
-//				entformdb.setName((String)result1.get("name"));
-//				entformdb.setComment((String)result1.get("comment"));
-//				entformdb.setLanguage((String)result1.get("language"));
-//				//移し替えたデータを持ったentformdbを、resultDB2に入れる
-//				resultDb2.add(entformdb);
-//			}
-//
-//			//Controllerに渡す
-//			return resultDb2;
-//		}
-		// 更新画面の表示(SELECT)
-		public List<EntForm> searchDb2(String name) {
+
+		// 検索
+		public List<EntForm> searchDb2(String name, String comment, String language) {
 
 		    // コンソールに表示
 		    System.out.println("編集画面を出します");
 		    
 		    // 部分一致で検索するSQLクエリを作成
-		    String sql = "SELECT * FROM sample WHERE name LIKE ?";
-		    
+		    String sql = "SELECT * FROM sample WHERE name LIKE ? OR comment LIKE ? OR language LIKE ?";
 		    // 部分一致で検索
-		    List<Map<String, Object>> resultDb1 = db.queryForList(sql, "%" + name + "%");
+		    List<Map<String, Object>> resultDb1 = db.queryForList(sql, "%" + name + "%", "%" + comment + "%", "%" + language + "%");
 		    
 		    // 画面に表示しやすい形のList(resultDb2)を用意
 		    List<EntForm> resultDb2 = new ArrayList<>();
