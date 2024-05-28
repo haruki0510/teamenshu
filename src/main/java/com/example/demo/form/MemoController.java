@@ -18,7 +18,7 @@ public class MemoController {
 	
 	@RequestMapping("/main")
 	public String form(Model model) {
-		model.addAttribute("title","コードメモ");
+		model.addAttribute("title","CodeMemo");
 		return "main1";
 	}
 	

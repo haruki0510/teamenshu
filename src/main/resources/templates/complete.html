@@ -3,13 +3,20 @@
 <head>
 <title>Hello</title>
 <meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="stylecomplete.css">
 </head>
 <body>
-<h1>完了ページ</h1>
-<p>DB登録が完了しました！</p>
-<a href="http://localhost:8080/h2-console" target="_blank">H2コンソール(別タブで開く)</a>
-<form method="get" action="#" th:action="@{/view}">
-			<input type="submit" value="一覧へ">
-		</form>
+<div class="container">
+    <h1>完了ページ</h1>
+    <p>DB登録が完了しました！</p>
+<!--    <a href="http://localhost:8080/h2-console" target="_blank">データベースへ</a>-->
+	<form method="get" action="#" th:action="@{/h2-console/login.jsp?jsessionid=619bfce5faa9403ff13e98dbeaed06f1}">
+	       <input type="submit" value="データベースへ">
+	 </form>	
+	
+    <form method="get" action="#" th:action="@{/view}">
+        <input type="submit" value="一覧へ">
+    </form>
+</div>
 </body>
 </html>
