@@ -115,8 +115,6 @@ public class SampleDao {
 		    return resultDb2;
 		}
 
-		
-		
 		//更新の実行(UPDATE)
 		public void updateDb(Long id, EntForm entform) {
 			//コンソールに表示
@@ -127,6 +125,24 @@ public class SampleDao {
 			db.update("UPDATE sample SET language = ? WHERE id = ?",entform.getLanguage(), id);
 		}
 		
-	
-	
+		public List<EntForm> searchDb3() {
+			//データベースからランダムで１つ取り出し、resultDB1に入れる（重複あり）
+			String sql = "	SELECT * FROM sample ORDER BY RAND() LIMIT 1;";
+			//画面に表示しやすい形のList(resultDB2)を用意
+			List<Map<String, Object>> resultDb1 = db.queryForList(sql);
+			//1件ずつピックアップ
+			List<EntForm> resultDb3 = new ArrayList<EntForm>();
+			for (Map<String, Object> result1 : resultDb1) {
+				//データ1件分を1つのまとまりとしたEntForm型の「entformdb」を生成
+				EntForm entformdb = new EntForm();
+				//id、nameのデータをentformdbに移す
+				entformdb.setName((String) result1.get("name"));
+				entformdb.setComment((String) result1.get("comment"));
+				entformdb.setLanguage((String) result1.get("language"));
+				//移し替えたデータを持ったentformdbを、resultDB2に入れる
+				resultDb3.add(entformdb);
+			}
+			//Controllerに渡す
+			return resultDb3;
+		}
 }

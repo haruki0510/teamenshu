@@ -3,20 +3,19 @@
 <head>
 <title>Hello</title>
 <meta charset="utf-8" />
-<link rel="stylesheet" th:href="@{/styleSearch.css}">
+<link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-	<h1>検索</h1>
 	<!-- 検索フォーム -->
 	<form method="get" action="#" th:action="@{/result}">
 	  <!-- ワードの入力 -->
+	  <p><span th:text="${question.comment}"></span></p>
 	  <p>
-	    ワード：<input type="text" name="word">
+	    答え：<input type="text" name="answer">
 	  </p>
-	  
 	  <!-- 送信ボタン -->
 	  <p>
-		<input type="submit" value="検索する">
+		<input type="submit" value="回答">
 	  </p>
 	</form>
 </body>
