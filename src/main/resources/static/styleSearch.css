@@ -1,0 +1,56 @@
+/* style.css */
+
+/* ページ全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ビューポートの高さ全体を使用 */
+    background-color: #fff; /* 背景色を設定 */
+    flex-direction: column;
+}
+
+/* フォームのコンテナを中央に配置 */
+form {
+    background-color: #fff; /* 背景色を白に設定 */
+    padding: 20px; /* パディングを追加 */
+    border: 1px solid #ddd; /* 境界線を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    
+}
+
+/* 各フォーム要素のスタイル */
+form p {
+    margin-bottom: 15px; /* 各要素の下部に余白を追加 */
+}
+
+/* テキスト入力フィールドのスタイル */
+input[type="text"],
+select {
+    width: 100%; /* 幅を100%に設定 */
+    padding: 10px; /* パディングを追加 */
+    border: 1px solid #ccc; /* 境界線を追加 */
+    border-radius: 5px; /* 角を丸くする */
+    box-sizing: border-box; /* パディングと境界線を含めてボックスサイズを計算 */
+}
+
+/* 送信ボタンのスタイル */
+input[type="submit"] {
+    display: block; /* ボタンをブロック要素に変更 */
+    width: 100%; /* 幅を100%に設定して親要素いっぱいに広げる */
+    padding: 10px; /* パディングを追加 */
+    background-color: #007bff; /* 背景色を設定 */
+    color: #fff; /* テキスト色を設定 */
+    border: none; /* 境界線をなくす */
+    border-radius: 5px; /* 角を丸くする */
+    cursor: pointer; /* マウスカーソルをポインターに変更 */
+    transition: background-color 0.3s ease; /* ホバー時のトランジションを設定 */
+}
+
+/* 送信ボタンのホバースタイル */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* ホバー時の背景色を設定 */
+}
