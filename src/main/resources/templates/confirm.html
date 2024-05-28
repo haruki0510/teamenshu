@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>確認ページ</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="style1.css">
+    <meta charset="UTF-8">
+    <title>確認ページ</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <body>
-<h1>確認ページ</h1>
-<div th:object="${input}" class="input-section">
-    <p th:text="*{name1}"></p>
-    <p th:text="*{comment1}"></p>
-	<p th:text="*{language1}"></p>
-
+    <h1>確認ページ</h1>
+    <div th:object="${input}" id="outer">
+        <div id="label">
+            <p>CODE：</p>
+            <p>コメント：</p>
+            <p>言語：</p>
+        </div>
+        <div id="elm">
+            <p th:text="*{name1}" id="name"></p>
+            <p th:text="*{comment1}" id="comment"></p>
+            <p th:text="*{language1}" id="language"></p>
+        </div>
+    </div>
+    <br><br>
     <div class="form-container">
         <form method="get" action="#" th:action="@{/complete}">
             <p>入力を完了しますか？</p>
             <input type="hidden" name="name1" th:value="*{name1}">
             <input type="hidden" name="comment1" th:value="*{comment1}">
-			<input type="hidden" name="language1" th:value="*{language1}">
+            <input type="hidden" name="language1" th:value="*{language1}">
             <input type="submit" value="はい">
         </form>
     </div>
@@ -25,10 +33,10 @@
         <form method="get" action="#" th:action="@{/form}">
             <input type="hidden" name="name1" th:value="*{name1}">
             <input type="hidden" name="comment1" th:value="*{comment1}">
-			<input type="hidden" name="language1" th:value="*{language1}">
+            <input type="hidden" name="language1" th:value="*{language1}">
             <input type="submit" value="戻る">
         </form>
     </div>
-</div>
 </body>
 </html>
+

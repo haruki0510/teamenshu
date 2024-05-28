@@ -1,45 +1,45 @@
-/* ページ全体のスタイル */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #ffff; /* 背景色を黄色に変更 */
+    background-color: #ffff;
     display: flex;
-   	flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-/* タイトルのスタイル */
 h1 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
-    border-bottom: 2px dashed #333; /* タイトルの下線を点線に変更 */
-    padding-bottom: 10px; /* 下線とタイトルの間隔を作成 */
+    border-bottom: 2px dashed #333;
+    padding-bottom: 10px;
 }
 
-/* 入力内容のスタイル */
-/* 入力内容のスタイル */
-.input-section {
-    background-color: #ffff;
-    border-radius: 5px;
-    padding: 50px;
-    margin-bottom: 20px;
-    border: none; /* 枠線を削除 */
+#label {
+    width: 160px;
+}
+#label, #elm {
+    display: table-cell;
 }
 
-
-.input-section p {
-    margin: 10px 0;
+p {
+    margin-left: 30px;
 }
 
-/* フォームのスタイル */
+#outer {
+    background-color: rgba(179, 229, 252, 0.2); /* 水色に変更 */
+    width: 70%;
+    padding: 20px; /* パディング追加 */
+    border-radius: 5px; /* 四角い図形 */
+    border: none; /* 枠線なし */
+}
+
 .form-container {
     text-align: center;
-    margin-top: 50px;
-    
+    margin-top: 20px;
 }
 
 .form-container form {
@@ -47,10 +47,9 @@ h1 {
     display: inline-block;
 }
 
-/* ボタンのスタイル */
 .form-container form input[type="submit"] {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #45a049;
     color: #ffff;
     border: none;
     border-radius: 5px;
@@ -60,5 +59,5 @@ h1 {
 }
 
 .form-container form input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
