@@ -18,15 +18,15 @@ h1 {
 }
 .sikaku {
     background-color: #f0f0f0; /* 透明度のある薄い水色に変更 */
-    width: 400px; /* 幅を調整 */
-    height: 200px;
+    min-width: 400px; /* 幅を調整 */
+    min-height: 200px;
     padding: 5px; /* パディング追加 */
     border-radius: 1em; /* 四角い図形 */
     border: none; /* 枠線なし */
     display: flex;
     justify-content: center;
     align-items: center; /* 中央に配置 */
-  
+    word-wrap: break-word;
 }
 
 #label {
@@ -47,7 +47,6 @@ p {
     text-align: center;
     margin-top: 20px;
     display: inline-block;
-    
 }
 .form-container form {
     margin: 20px;
@@ -55,16 +54,17 @@ p {
 }
 .form-container form input[type="submit"] {
     padding: 10px 20px;
-    background-color: #45A049;
+    background-color: #007bff;
     color: #ffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 1px; /* ボタンの間隔を追加 */
+    margin-left: 65px;
 }
 .form-container form input[type="submit"]:hover {
-    background-color: #45A049;
+    background-color: #0056b3;
 }
 
 
