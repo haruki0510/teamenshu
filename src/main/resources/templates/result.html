@@ -4,8 +4,13 @@
     <title>Price List</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" th:href="@{/style.css}">
+	
+
 </head>
 <body>
+	<header onclick="window.location.href='/main';" style="cursor: pointer;">
+				<h2>チーム開発演習</h2>
+		</header>
 	
 	<div class="aaa"></div>
 	<h1 th:text="検索結果"></h1>
@@ -35,8 +40,11 @@
 			</td>
 		</tr>
 	</table>
+	<p></p>
+	<div class="button-container">
 	<form method="get" action="#" th:action="@{/search}">
 				<input type="submit" value="検索画面へ">
 	</form>
+	</div>
 </body>
 </html>

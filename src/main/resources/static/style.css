@@ -1,4 +1,26 @@
 @charset "UTF-8";
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+	margin: 0;   
+    font-size: 20px;
+    font-weight: bold;
+    color:#000;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+
+
 /* ページ全体のスタイル */
 body {
     font-family: Arial, sans-serif;
@@ -15,7 +37,7 @@ h1 {
 /* リンクのスタイル */
 a {
     text-decoration: none;
-    color: #007bff;
+    color: rgb(192, 192, 192);
     transition: color 0.3s;
 }
 
@@ -55,6 +77,14 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+	  .button-container {
+	    display: flex; /* Flexboxを使用して要素を横並びに配置 */
+		justify-content: flex-end; /* 要素を右端に配置 */
+	  }
+	
+	  .button-container form {
+	    margin-right: 5px; /* ボタン間の間隔を設定 */
+	  }
 
 .aaa {
     position: fixed; /* 要素を固定配置 */
