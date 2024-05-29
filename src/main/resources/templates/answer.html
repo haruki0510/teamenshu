@@ -3,19 +3,20 @@
 <head>
     <title>Price List</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" th:href="@{/style1.css}">
+	<link rel="stylesheet" th:href="@{/styleanswer.css}">
 </head>
 <body>
 	<div class="aaa"></div>
 	<h1 th:text="答え"></h1>
 	
 	<p><span th:text="${question.name}"></span></p>
-	
+	<div class="wakusen">
 	<form method="get" action="#" th:action="@{/view}">
 				<input type="submit" value="一覧画面へ">
 	</form>
 	<form method="get" action="#" th:action="@{/question}">
 				<input type="submit" value="次の問題へ">
 	</form>
+	</div>
 </body>
 </html>

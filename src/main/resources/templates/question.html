@@ -3,18 +3,18 @@
 <head>
 <title>Hello</title>
 <meta charset="utf-8" />
-<link rel="stylesheet" th:href="@{/style1.css}">
+<link rel="stylesheet" th:href="@{/stylequestion.css}">
 </head>
 <body>
+	<div class="aaa"></div>
 	<h1>問題</h1>
 	<!-- 検索フォーム -->
 	<form method="get" action="#" th:action="@{/answer}">
 	  <!-- ワードの入力 -->
 	  <p><span th:text="${question.comment}"></span></p>
-	  <p>
-	    答え：<input type="text" name="answer">
+	  <p class="kotae">
+	    <h2>答え：<input type="text" name="answer"></h2>
 	  </p>
-	  <!-- 送信ボタン -->
 	  <p>
 		<input type="submit" value="回答">
 	  </p>

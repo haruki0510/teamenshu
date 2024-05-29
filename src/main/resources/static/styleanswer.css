@@ -1,0 +1,86 @@
+/* stylequestion.css */
+
+/* 全体を中央寄せ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.2em; /* 文字サイズを少し大きめに */
+  background-color: #f8f9fa; /* 背景色 */
+  flex-direction: column;
+}
+
+/* フォーム全体を中央寄せ */
+wakusen {
+  text-align: center;
+  
+  min-width: 400px; /* 幅を調整 */
+  min-height: 200px;
+  background-color: #fff;
+  border: 2px solid rgb(128, 64, 0); /* オレンジ色のおしゃれな枠線 */
+  border-radius: 10px; /* 角を少し丸める */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+}
+
+/* 質問コメントのスタイル */
+span {
+  font-size: 1.5em; /* 文字サイズを少し大きく */
+  padding: 10px;
+  border-radius: 10px; /* 角を少し丸める */
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: white; /* 枠線の中の背景を白に */
+}
+
+/* 答えのラベルのスタイル */
+/*.kotae {*/
+/*  font-size: 1.5em;  文字サイズを少し大きく */
+/*  text-decoration: underline;  下線を追加 */
+/*  color: #333;  文字色を濃いグレーに */
+/*  margin-bottom: 10px;*/
+/*  display: inline-block;*/
+/*  border-bottom: 2px solid rgb(255, 255, 0);  下線の色をオレンジに */
+/*  padding-bottom: 5px;*/
+/*}*/
+
+/* 答えの入力フィールド */
+.kotae input[type="text"] {
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+}
+
+/* ボタンのスタイル */
+input[type="submit"] {
+  background-color: blue; /* ボタンを青色に */
+  color: white; /* ボタンの文字色を白に */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em; /* ボタンの文字サイズ */
+  cursor: pointer;
+  border-radius: 5px; /* ボタンの角を少し丸める */
+  margin-top: 20px;
+}
+
+/* ボタンをホバーしたときのスタイル */
+input[type="submit"]:hover {
+  background-color: darkblue; /* ホバー時に色を少し濃くする */
+}
+
+
+.aaa {
+    position: fixed; /* 要素を固定配置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 画面の背面に配置 */
+    background-image: url('450-20101202081413110211.jpg'); /* 画像のパスを指定 */
+    background-size: cover; /* 画像を要素全体に広げる */
+    background-position: center; /* 画像を中央に配置 */
+}
