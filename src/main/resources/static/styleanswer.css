@@ -35,7 +35,7 @@ body {
 }
 
 /* フォーム全体を中央寄せ */
-wakusen {
+.wakusen {
   text-align: center;
   
   min-width: 400px; /* 幅を調整 */
