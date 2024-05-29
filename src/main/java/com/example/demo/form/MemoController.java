@@ -24,7 +24,7 @@ public class MemoController {
 	
 	@RequestMapping("/form")
 	public String form(Model model, Input input) {
-		model.addAttribute("title","新規作成");
+		model.addAttribute("title","登録");
 		return "input";
 	}
 	@RequestMapping("/search")
@@ -96,7 +96,7 @@ public class MemoController {
 		public String view(Model model) {
 			List<EntForm> list = sampledao.searchDb();
 			model.addAttribute("dbList",list);
-			model.addAttribute("title","一覧ページ");
+			model.addAttribute("title","List");
 			return "view";
 		}
 		//削除(DELETE)

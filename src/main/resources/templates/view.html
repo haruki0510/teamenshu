@@ -4,8 +4,19 @@
 <title>Hello</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" th:href="@{/style.css}">
+
+<style>
+  .button-container {
+    display: flex; /* Flexboxを使用して要素を横並びに配置 */
+	justify-content: flex-end; /* 要素を右端に配置 */
+  }
+
+  .button-container form {
+    margin-right: 1px; /* ボタン間の間隔を設定 */
+  }
+</style>
 </head>
-<body>
+<p>
 	
 	<div class="aaa"></div>
 	<h1 th:text="${title}"></h1>
@@ -35,11 +46,21 @@
 			</td>
 		</tr>
 	</table>
-	<p>
-		<a href="/form" th:href="@{/form}">フォーム入力画面へ</a>
-	</p>
-	<form method="get" action="#" th:action="@{/search}">
-				<input type="submit" value="検索画面へ">
+	<div class="button-container">
+	<form method="get" action="#" th:action="@{/confirm}">
+			<input type="submit" value="入力画面へ">
 	</form>
+	<p></p>
+	<form method="get" action="#" th:action="@{/search}">
+			<input type="submit" value="検索画面へ">
+	</form>
+	<p></p>
+	<div class = "quizbutton">
+	<form method="get" action="#" th:action="@{/question}">
+			<input type="submit" value="クイズへ">
+	</form>
+	</div>
+	</div>
+	
 </body>
 </html>
