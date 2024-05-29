@@ -1,10 +1,8 @@
 package com.example.demo.form;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
 public class Input {
-	@Size(min=1, max=10, message="1~10文字以内にしてください")
 	private String name1;
 	@NotBlank(message="文字を入力してください")
 	private String comment1;
