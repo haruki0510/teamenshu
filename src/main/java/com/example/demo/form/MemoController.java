@@ -44,17 +44,18 @@ public class MemoController {
 	    
 	    return "result";
 	}
+	
 	@RequestMapping("/answer")
 	public String answer1(Model model, Input input) {
 	    
 	    // word 変数の値を使用して PreparedStatement をセットアップします
-	    List<EntForm> list = sampledao.searchDb2(input.getWord(), input.getWord(), input.getWord());
-	   
-	    // 結果をモデルに追加
-	    model.addAttribute("answers", list);
+		List<EntForm> questions = sampledao.searchDb3();
+        model.addAttribute("question", questions.get(0));
 	    
 	    return "answer";
 	}
+	
+	
     @RequestMapping("/question")
     public String quiz1(Model model) {
         List<EntForm> questions = sampledao.searchDb3();
