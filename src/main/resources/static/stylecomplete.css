@@ -80,3 +80,48 @@ form input[type="submit"]:hover {
     background-position: center; /* 画像を中央に配置 */
 }
 
+
+/* 完了ページの背景色と余白を設定 */
+.container {
+    text-align: center;
+    margin-top: 50px; /* 余白を追加 */
+}
+
+/* 完了メッセージのスタイル */
+.completion-box {
+    background-color: #f0f0f0; /* 薄い水色に変更 */
+    padding: 40px; /* パディング追加 */
+    border-radius: 10px; /* 角丸に */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    display: inline-block; /* ボックスをインライン配置 */
+}
+
+/* 完了メッセージのテキストスタイル */
+.completion-box p {
+    font-size: 24px; /* フォントサイズを変更 */
+}
+
+/* ボタンのコンテナのスタイル */
+.buttons {
+    margin-top: 20px; /* ボタン上の余白を追加 */
+}
+
+/* ボタンのスタイル */
+.buttons form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px; /* パディングを変更 */
+    font-size: 18px; /* フォントサイズを変更 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* ボタン間の余白を追加 */
+}
+
+/* ボタンのホバースタイル */
+.buttons form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
