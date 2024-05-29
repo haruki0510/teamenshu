@@ -20,8 +20,8 @@ header {
     top: 0;
     left: 0;
     padding: 10px 10px;
-    background-color: rgb(192, 192, 192); /* 背景色を追加して読みやすく */
-    border-bottom: 2px solid rgb(0, 0, 0); /* 下線を追加 */
+    background-color: rgb(192, 192, 192);  
+    border-bottom: 2px solid rgb(0, 0, 0);  
     display: flex;
     align-items: center;
 }
@@ -31,6 +31,8 @@ h2 {
     font-size: 20px;
     font-weight: bold;
     color:#000;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 
@@ -74,6 +76,8 @@ h1 {
     color: rgb(0, 0, 0); /* タイトルの文字色を派手に */
     font-size: 64px; /* タイトルのフォントサイズを大きく */
     margin-bottom: 20px; /* 下部の余白を追加 */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
 }
 
 /* 各フォームを横並びに配置 */
@@ -81,10 +85,13 @@ h1 {
     display: inline-block;
     margin-right: 20px;
     vertical-align: top; /* フォームとイラストを上揃えにする */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
-
+.custom-font-button{
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 /* イラストのサイズを調整 */
 .form-with-illustration img {
     width: 120px; /* 幅を120pxに設定 */
@@ -95,7 +102,7 @@ h1 {
 form input[type="submit"] {
     background-color: #007bff;
     color: #fff;
-    padding: 25px 50px; /* ボタンのサイズを大きくする */
+    padding: 20px 40px; /* ボタンのサイズを大きくする */
     font-size: 24px; /* ボタンのフォントサイズを大きくする */
     border: none;
     border-radius: 8px;
