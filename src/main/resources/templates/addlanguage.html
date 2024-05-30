@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Hello</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" th:href="@{/styleSearch.css}">
+</head>
+<body>
+	<header onclick="window.location.href='/main';" style="cursor: pointer;">
+			<h2>チーム開発演習</h2>
+	</header>
+	<div class="aaa"></div>
+	<h1>登録</h1>
+	<!-- 登録フォーム -->
+	<form method="get" action="#" th:action="@{/addlanguage2}" 	th:object="${input2}">
+	  <!-- ワードの入力 -->
+	  <p>
+	    言語追加：<input type="text" name="addlanguage">
+	  </p>
+	 
+	  <!-- 送信ボタン -->
+	  <p>
+		<input type="submit" value="検索する">
+	  </p>
+	</form>
+</body>
+</html>

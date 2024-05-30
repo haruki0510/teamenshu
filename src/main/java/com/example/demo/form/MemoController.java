@@ -17,6 +17,7 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MemoController {
+	private LanguageService languageservice;
 	
 	@RequestMapping("/main")
 	public String form(Model model) {
@@ -27,6 +28,7 @@ public class MemoController {
 	@RequestMapping("/form")
 	public String form(Model model, Input input) {
 		model.addAttribute("title","登録");
+		model.addAttribute("languages",languageservice.getAllLanguages());
 		return "input";
 	}
 	@RequestMapping("/search")
@@ -72,6 +74,17 @@ public class MemoController {
         
         return "answer";
     }
+    @RequestMapping("/addlanguage")
+	public String addlanguage(Model model, Input2 input2) {
+		model.addAttribute("title","サンプルフォーム");
+		return "addlanguage";
+	}
+	@RequestMapping("/addlanguage2")
+	public String addlanguage2(Model model, Input2 input2) {
+		languageservice.addLanguage(input2.getAddlanguage());
+		model.addAttribute("title","サンプルフォーム");
+		return "redirect:/form";
+	}
 	
 	
 	@RequestMapping("/confirm")
@@ -86,8 +99,9 @@ public class MemoController {
 	//SampleDaoの用意
 		private final SampleDao sampledao;
 		@Autowired
-		public MemoController(SampleDao sampledao) {
+		public MemoController(SampleDao sampledao, LanguageService languageservice) {
 			this.sampledao = sampledao;
+			this.languageservice = languageservice;
 		}
 
 		//完了の処理

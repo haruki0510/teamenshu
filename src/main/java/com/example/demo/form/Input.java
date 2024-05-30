@@ -8,7 +8,16 @@ public class Input {
 	private String comment1;
 	private String word;
 	private String language1;
+	private String addlanguages;
 	
+	public String getAddlanguages() {
+		return addlanguages;
+	}
+
+	public void setAddlanguages(String addlanguages) {
+		this.addlanguages = addlanguages;
+	}
+
 	public String getLanguage1() {
 		return language1;
 	}

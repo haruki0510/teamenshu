@@ -59,6 +59,9 @@
                 <option value="html">HTML</option>
                 <option value="css">CSS</option>
                 <option value="javascript">JavaScript</option>
+				<th:block th:each="language : ${languages}">
+								       <option th:value="${language}" th:text="${language}"></option>
+								 </th:block>
             </select>
         </div>
 		<p></p>
