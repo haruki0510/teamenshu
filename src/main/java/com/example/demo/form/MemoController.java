@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.dao.SampleDao;
 import com.example.demo.entity.EntForm;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class MemoController {
 	
@@ -45,23 +47,30 @@ public class MemoController {
 	    return "result";
 	}
 	
-	@RequestMapping("/answer")
-	public String answer1(Model model, Input input) {
-	    
-	    // word 変数の値を使用して PreparedStatement をセットアップします
-		List<EntForm> questions = sampledao.searchDb3();
-        model.addAttribute("question", questions.get(0));
-	    
-	    return "answer";
-	}
-	
-	
+
     @RequestMapping("/question")
-    public String quiz1(Model model) {
+    public String quiz1(Model model, HttpSession session) {
         List<EntForm> questions = sampledao.searchDb3();
+        session.setAttribute("questions", questions);
         model.addAttribute("question", questions.get(0));
         
         return "question";
+    }
+
+    @RequestMapping("/answer")
+    public String answer1(Model model, HttpSession session) {
+        // セッションから questions リストを取得
+        @SuppressWarnings("unchecked")
+        List<EntForm> questions = (List<EntForm>) session.getAttribute("questions");
+
+        if (questions != null && !questions.isEmpty()) {
+            model.addAttribute("question", questions.get(0));
+        } else {
+            // エラーハンドリング（例: 質問リストがない場合）
+            model.addAttribute("error", "質問リストが見つかりませんでした。");
+        }
+        
+        return "answer";
     }
 	
 	
