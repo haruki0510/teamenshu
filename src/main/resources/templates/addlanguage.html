@@ -3,16 +3,47 @@
 <head>
 <title>Hello</title>
 <meta charset="utf-8" />
-<link rel="stylesheet" th:href="@{/styleSearch.css}">
+<link rel="stylesheet" th:href="@{/stylelanguage.css}">
 </head>
 <body>
 	<header onclick="window.location.href='/main';" style="cursor: pointer;">
 			<h2>チーム開発演習</h2>
 	</header>
+	
+	<script src="menu.js"></script>
+	 <div class="aaa"></div>
+	    <div class="hamburger-menu">
+	        <div class="menu-icon" id="menu-icon">
+	            &#9776; <!-- ハンバーガーアイコン -->
+	        </div>
+	        <div class="side-nav" id="side-nav">
+	            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+				<form method="get" action="#" th:action="@{/main}">
+					<input type="submit" value="HOME" class="h-menu">
+				</form>
+				
+				<form method="get" action="#" th:action="@{/form}">
+				                <input type="submit" value="登録" class="h-menu">
+				</form>
+				
+				<form method="get" action="#" th:action="@{/view}">
+				                <input type="submit" value="一覧" class="h-menu">
+				 </form>
+							
+				 <form method="get" action="#" th:action="@{/search}">
+				                <input type="submit" value="検索" class="h-menu">
+				 </form>
+				 
+				 <form method="get" action="#" th:action="@{/question}">
+				 			    <input type="submit" value="クイズへ" class="h-menu">
+				  </form>
+	        </div>
+	  </div>
+	
 	<div class="aaa"></div>
 	<h1>登録</h1>
 	<!-- 登録フォーム -->
-	<form method="get" action="#" th:action="@{/addlanguage2}" 	th:object="${input2}">
+	<form method="get" action="#" th:action="@{/addlanguage2}" 	th:object="${input2}" class="ccc">
 	  <!-- ワードの入力 -->
 	  <p>
 	    言語追加：<input type="text" name="addlanguage">
@@ -20,7 +51,7 @@
 	 
 	  <!-- 送信ボタン -->
 	  <p>
-		<input type="submit" value="検索する">
+		<input type="submit" value="検索する" class="color">
 	  </p>
 	</form>
 </body>
