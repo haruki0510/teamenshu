@@ -10,6 +10,36 @@
 <header onclick="window.location.href='/main';" style="cursor: pointer;">
 		<h2>チーム開発演習</h2>
 </header>
+<script src="menu.js"></script>
+<div class="aaa"></div>
+<div class="hamburger-menu">
+    <div class="menu-icon" id="menu-icon">
+        &#9776; <!-- ハンバーガーアイコン -->
+    </div>
+    <div class="side-nav" id="side-nav">
+        <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+		<form method="get" action="#" th:action="@{/main}">
+			<input type="submit" value="HOME" class="h-menu">
+		</form>
+		
+		<form method="get" action="#" th:action="@{/form}">
+		                <input type="submit" value="登録" class="h-menu">
+		</form>
+		
+		<form method="get" action="#" th:action="@{/view}">
+		                <input type="submit" value="一覧" class="h-menu">
+		 </form>
+					
+		 <form method="get" action="#" th:action="@{/search}">
+		                <input type="submit" value="検索" class="h-menu">
+		 </form>
+		 
+		 <form method="get" action="#" th:action="@{/question}">
+		 			    <input type="submit" value="クイズへ" class="h-menu">
+		  </form>
+    </div>
+</div>
+
 <p>
 	
 	<div class="aaa"></div>
@@ -30,12 +60,12 @@
 			<td th:text="${res.language}">言語</td>
 			<td>
 				<form th:action="@{/edit/{id}(id=${res.id})}">
-					<input type="submit" value="編集">
+					<input type="submit" value="編集" 	class="custom-font-button">
 				</form>
 			</td>
 			<td>
 				<form th:action="@{/del/{id}(id=${res.id})}">
-					<input type="submit" value="削除" />
+					<input type="submit" value="削除" class="custom-font-button" />
 				</form>
 			</td>
 		</tr>
@@ -43,16 +73,16 @@
 	<p></p>
 	<div class="button-container">
 	<form method="get" action="#" th:action="@{/form}">
-			<input type="submit" value="登録画面へ">
+			<input type="submit" value="登録画面へ"		class="custom-font-button">
 	</form>
 	<p></p>
 	<form method="get" action="#" th:action="@{/search}">
-			<input type="submit" value="検索画面へ">
+			<input type="submit" value="検索画面へ"		class="custom-font-button">
 	</form>
 	<p></p>
 	<div class = "quizbutton">
 	<form method="get" action="#" th:action="@{/question}">
-			<input type="submit" value="クイズへ">
+			<input type="submit" value="クイズへ"		class="custom-font-button">
 	</form>
 	</div>
 	</div>

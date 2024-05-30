@@ -11,16 +11,46 @@
 	</header>
 	<div class="aaa"></div>
 	
+	<script src="menu.js"></script>
+	 <div class="aaa"></div>
+	    <div class="hamburger-menu">
+	        <div class="menu-icon" id="menu-icon">
+	            &#9776; <!-- ハンバーガーアイコン -->
+	        </div>
+	        <div class="side-nav" id="side-nav">
+	            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+				<form method="get" action="#" th:action="@{/main}">
+					<input type="submit" value="HOME" class="h-menu">
+				</form>
+				
+				<form method="get" action="#" th:action="@{/form}">
+				                <input type="submit" value="登録" class="h-menu">
+				</form>
+				
+				<form method="get" action="#" th:action="@{/view}">
+				                <input type="submit" value="一覧" class="h-menu">
+				 </form>
+							
+				 <form method="get" action="#" th:action="@{/search}">
+				                <input type="submit" value="検索" class="h-menu">
+				 </form>
+				 
+				 <form method="get" action="#" th:action="@{/question}">
+				 			    <input type="submit" value="クイズへ" class="h-menu">
+				  </form>
+	        </div>
+	    </div>
+	
 <div class="container">
     <h1>完了ページ</h1>
     <div class="completion-box">
         <p>DB登録が完了しました！</p>
         <div class="buttons">
             <form method="get" action="#" th:action="@{/h2-console/login.jsp?jsessionid=619bfce5faa9403ff13e98dbeaed06f1}">
-               <input type="submit" value="データベースへ">
+               <input type="submit" value="データベースへ" class="sss">
             </form>	
             <form method="get" action="#" th:action="@{/view}">
-                <input type="submit" value="　　一覧へ　　">
+                <input type="submit" value="　　一覧へ　　" class="sss">
             </form>
         </div>
     </div>

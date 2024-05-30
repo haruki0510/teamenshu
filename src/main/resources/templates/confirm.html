@@ -9,6 +9,35 @@
 	<header onclick="window.location.href='/main';" style="cursor: pointer;">
 			<h2>チーム開発演習</h2>
 	</header>
+	<script src="menu.js"></script>
+	<div class="hamburger-menu">
+	        <div class="menu-icon" id="menu-icon">
+	            &#9776; <!-- ハンバーガーアイコン -->
+	        </div>
+	        <div class="side-nav" id="side-nav">
+	            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+				<form method="get" action="#" th:action="@{/main}">
+					<input type="submit" value="HOME" class="h-menu">
+				</form>
+				
+				<form method="get" action="#" th:action="@{/form}">
+				                <input type="submit" value="登録" class="h-menu">
+				</form>
+				
+				<form method="get" action="#" th:action="@{/view}">
+				                <input type="submit" value="一覧" class="h-menu">
+				 </form>
+							
+				 <form method="get" action="#" th:action="@{/search}">
+				                <input type="submit" value="検索" class="h-menu">
+				 </form>
+				 
+				 <form method="get" action="#" th:action="@{/question}">
+				 			    <input type="submit" value="クイズへ" class="h-menu">
+				  </form>
+	        </div>
+	    </div>
+	
 <div class="aaa"></div>
 	
 <h1>確認ページ</h1>

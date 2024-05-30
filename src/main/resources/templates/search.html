@@ -6,13 +6,43 @@
 <link rel="stylesheet" th:href="@{/styleSearch.css}">
 </head>
 <body>
+	<script src="menu.js"></script>
 	<header onclick="window.location.href='/main';" style="cursor: pointer;">
 			<h2>チーム開発演習</h2>
 	</header>
+	
+	<div class="hamburger-menu">
+	       <div class="menu-icon" id="menu-icon">
+	           &#9776; <!-- ハンバーガーアイコン -->
+	       </div>
+	       <div class="side-nav" id="side-nav">
+	           <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+			<form method="get" action="#" th:action="@{/main}">
+				<input type="submit" value="HOME" class="h-menu">
+			</form>
+			
+			<form method="get" action="#" th:action="@{/form}">
+			                <input type="submit" value="登録" class="h-menu">
+			</form>
+			
+			<form method="get" action="#" th:action="@{/view}">
+			                <input type="submit" value="一覧" class="h-menu">
+			 </form>
+						
+			 <form method="get" action="#" th:action="@{/search}">
+			                <input type="submit" value="検索" class="h-menu">
+			 </form>
+			 
+			 <form method="get" action="#" th:action="@{/question}">
+			 			    <input type="submit" value="クイズへ" class="h-menu">
+			  </form>
+	       </div>
+	   </div>
+	
 	<div class="aaa"></div>
 	<h1>検索</h1>
 	<!-- 検索フォーム -->
-	<form method="get" action="#" th:action="@{/result}">
+	<form method="get" action="#" th:action="@{/result}" class="kakiku">
 	  <!-- ワードの入力 -->
 	  <p>
 	    ワード：<input type="text" name="word">
@@ -20,7 +50,7 @@
 	  
 	  <!-- 送信ボタン -->
 	  <p>
-		<input type="submit" value="検索する">
+		<input type="submit" value="検索する" class="aiueo">
 	  </p>
 	</form>
 </body>

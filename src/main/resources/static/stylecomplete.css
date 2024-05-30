@@ -14,6 +14,8 @@ header {
 
 h2 {
 	margin: 0;   
+	 margin-left: 30px; 
+     margin-top: 5px;
     font-size: 20px;
     font-weight: bold;
     color:#000;
@@ -21,6 +23,51 @@ h2 {
     
 }
 
+/* ハンバーガーメニューのスタイル */
+.hamburger-menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+}
+
+.side-nav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -52,7 +99,7 @@ form {
     margin-top: 20px; /* フォームの上部マージンを追加 */
 }
 
-form input[type="submit"] {
+.sss {
     background-color: #007bff;
     color: #fff;
     padding: 20px 40px; /* ボタンのパディングを変更 */
@@ -63,7 +110,7 @@ form input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-form input[type="submit"]:hover {
+.sss:hover {
     background-color: #0056b3;
 }
 
@@ -124,4 +171,23 @@ form input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+
+
+.h-menu {
+    background: none;      /* 背景色をなしに */
+    border: none;          /* 枠線をなしに */
+    color: inherit;        /* 親要素の文字色を継承 */
+    font: inherit;         /* 親要素のフォントを継承 */
+    cursor: pointer;       /* ポインターを手の形に */
+    padding: 0;            /* パディングをなしに */
+    margin: 0;             /* マージンをなしに */
+    padding: 20px 40px;  
+    font-size: 24px; 
+    color: rgb(255, 255, 255);   
+	}
+
+.h-menu:hover {
+    color: rgb(255, 255, 255);             /* ホバー時の文字色を変更（例：青） */
+    text-decoration: underline; /* ホバー時の下線を表示 */
+}
 

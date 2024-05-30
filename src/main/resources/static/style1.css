@@ -14,11 +14,60 @@ header {
 
 h2 {
 	margin: 0;   
+	 margin-top: 5px;
+	 margin-left: 30px; 
     font-size: 20px;
     font-weight: bold;
     color:#000;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
+}
+
+
+/* ハンバーガーメニューのスタイル */
+.hamburger-menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+}
+
+.side-nav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 
@@ -42,7 +91,7 @@ h1 {
 }
 .sikaku {
     background-color: #f0f0f0; /* 透明度のある薄い水色に変更 */
-    min-width: 400px; /* 幅を調整 */
+    min-width: 400px;  
     min-height: 200px;
     padding: 5px; /* パディング追加 */
     border-radius: 1em; /* 四角い図形 */
@@ -109,3 +158,23 @@ p {
     background-size: cover; /* 画像を要素全体に広げる */
     background-position: center; /* 画像を中央に配置 */
 }
+
+
+.h-menu {
+    background: none;      /* 背景色をなしに */
+    border: none;          /* 枠線をなしに */
+    color: inherit;        /* 親要素の文字色を継承 */
+    font: inherit;         /* 親要素のフォントを継承 */
+    cursor: pointer;       /* ポインターを手の形に */
+    padding: 0;            /* パディングをなしに */
+    margin: 0;             /* マージンをなしに */
+    padding: 20px 40px;  
+    font-size: 24px; 
+    color: rgb(255, 255, 255);   
+	}
+
+.h-menu:hover {
+    color: rgb(255, 255, 255);             /* ホバー時の文字色を変更（例：青） */
+    text-decoration: underline; /* ホバー時の下線を表示 */
+}
+
