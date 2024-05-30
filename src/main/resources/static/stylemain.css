@@ -1,5 +1,50 @@
-/* ページ全体を画面中央に配置 */
+/* ハンバーガーメニューのスタイル */
+.hamburger-menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
 
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+}
+
+.side-nav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* その他の既存のスタイル */
 .aaa {
     position: fixed;  
     top: 8%;
@@ -12,13 +57,11 @@
     background-position: center;  
 }
 
-
-
 header {
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0px;
     padding: 10px 10px;
     background-color: rgb(232, 232, 232);  
     border-bottom: 2px solid rgb(0, 0, 0);  
@@ -29,16 +72,14 @@ header {
 }
 
 h2 {
-	margin: 0;   
+    margin: 0;  
+    margin-left: 30px; 
+     margin-top: 5px;
     font-size: 20px;
     font-weight: bold;
     color:#000;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-
-
 
 body {
     font-family: Arial, sans-serif;
@@ -52,57 +93,28 @@ body {
     height: 100vh;
 }
 
-/* コンテナのスタイル */
 .container {
     text-align: center;
-        z-index: 0;
+    z-index: 0;
 }
 
-/*.aaa {*/
-/*    position: fixed;  */
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    z-index: -1;   */
-/*    background-image: url('450-20101202081413110211.jpg');   */
-/*    background-size: cover;  */
-/*    background-position: center;  */
-/*}*/
-
-
-
-
-/* タイトルのスタイル */
 h1 {
     color: rgb(0, 0, 0); /* タイトルの文字色を派手に */
     font-size: 64px; /* タイトルのフォントサイズを大きく */
     margin-bottom: 20px; /* 下部の余白を追加 */
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
 }
 
-/* 各フォームを横並びに配置 */
 .form-with-illustration {
     display: inline-block;
     margin-right: 20px;
     vertical-align: top; /* フォームとイラストを上揃えにする */
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-.custom-font-button{
-	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-/* イラストのサイズを調整 */
-.form-with-illustration img {
-    width: 120px; /* 幅を120pxに設定 */
-    height: auto; /* 高さは自動調整 */
-}
-
-/* フォーム内の要素のスタイル */
-form input[type="submit"] {
-    background-color: #007bff;
+.custom-font-button {
+   	 background-color: #007bff;
     color: #fff;
     padding: 20px 40px; /* ボタンのサイズを大きくする */
     font-size: 24px; /* ボタンのフォントサイズを大きくする */
@@ -110,9 +122,33 @@ form input[type="submit"] {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-form input[type="submit"]:hover {
+.form-with-illustration img {
+    width: 120px; /* 幅を120pxに設定 */
+    height: auto; /* 高さは自動調整 */
+}
+
+.h-menu {
+    background: none;      /* 背景色をなしに */
+    border: none;          /* 枠線をなしに */
+    color: inherit;        /* 親要素の文字色を継承 */
+    font: inherit;         /* 親要素のフォントを継承 */
+    cursor: pointer;       /* ポインターを手の形に */
+    padding: 0;            /* パディングをなしに */
+    margin: 0;             /* マージンをなしに */
+    padding: 20px 40px;  
+    font-size: 24px; 
+    color: rgb(255, 255, 255);   
+	}
+
+.h-menu:hover {
+    color: rgb(255, 255, 255);             /* ホバー時の文字色を変更（例：青） */
+    text-decoration: underline; /* ホバー時の下線を表示 */
+}
+
+
+.custom-font-button:hover {
     background-color: #0056b3;
 }
-
