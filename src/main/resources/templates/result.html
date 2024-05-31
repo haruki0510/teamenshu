@@ -29,7 +29,7 @@
 			<td th:text="${res.comment}">コメント</td>
 			<td th:text="${res.language}">言語</td>
 			<td>
-				<form th:action="@{/edit/{id}(id=${res.id})}">
+				<form th:action="@{/edit/{id}(id=${res.id})}" >
 					<input type="submit" value="編集">
 				</form>
 			</td>
@@ -43,10 +43,10 @@
 	<p></p>
 	<div class="button-container">
 	<form method="get" action="#" th:action="@{/search}">
-				<input type="submit" value="検索画面へ">
+				<input type="submit" value="検索画面へ" class="custom-font-button">
 	</form>
-	<form method="get" action="#" th:action="@{/view}">
-					<input type="submit" value="一覧へ">
+	<form method="get" action="#" th:action="@{/view}" >
+					<input type="submit" value="一覧へ"		class="custom-font-button">
 	</form>
 	</div>
 </body>
